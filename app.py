@@ -1,5 +1,5 @@
-from flask import Flask, request, jsonify
 import json
+from flask import Flask, request, jsonify
 from image_caption import image_caption
 
 app = Flask(__name__)
@@ -9,7 +9,6 @@ def caption_api():
     try:
         # Get user message from the request body
         image = request.files["image"]
-        print('image', image)
         multi_response = True # request.json["multi_response"]
         # Check for predefined responses
         responses = image_caption(image)
@@ -21,7 +20,7 @@ def caption_api():
     except Exception as e:
         print("error", e)
         return jsonify({
-            "error": True
+            "error": str(e)
         })
 
 

@@ -1,9 +1,7 @@
 import numpy as np
-from pretrained.generator import blip
 from PIL import Image
-# from custom.generator import generator
+from mymodel.inference import generate_caption
 
 def image_caption(image):
-    image = Image.open(image)
-    responses = blip(image)
+    responses = generate_caption(image)
     return responses
