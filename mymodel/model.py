@@ -343,3 +343,5 @@ def train_model():
 
   # save model weights
   model.save_weights('mymodel/models/model_weights')
+
+# train_model()

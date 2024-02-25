@@ -1,3 +1,4 @@
+from .models import blip
 
 def generate_caption(image):
-    pass
+    return blip(image)

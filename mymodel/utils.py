@@ -3,10 +3,6 @@ from PIL import Image
 
 IMAGE_SHAPE=(224, 224, 3)
 
-# def load_image(image_path):
-#     image = Image.open(image_path)
-#     return image
-
 
 def resize_image(image):
     # img = load_image(image_path)

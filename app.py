@@ -16,7 +16,9 @@ def caption_api():
         result = responses if multi_response else responses[0]
         # Generate JSON response for the platform (replace with your platform's specific format)
         # data = json.dumps({"message": responses})
-        return jsonify(result), 200
+        return jsonify({
+            "data": result,
+        }), 200
     except Exception as e:
         print("error", e)
         return jsonify({
